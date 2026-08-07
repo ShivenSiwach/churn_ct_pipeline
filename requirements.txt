@@ -1,0 +1,14 @@
+# Data & ML
+pandas
+numpy
+scikit-learn
+xgboost
+
+# API Deployment
+fastapi
+uvicorn
+pydantic
+
+# MLOps & Tracking
+mlflow
+evidently

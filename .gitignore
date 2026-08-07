@@ -1,0 +1,10 @@
+# Virtual Environment
+venv/
+__pycache__/
+
+# Datasets (Keep data local!)
+data/*.csv
+data/*.json
+
+# Environment Variables
+.env
