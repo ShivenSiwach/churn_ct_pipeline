@@ -8,3 +8,6 @@ data/*.json
 
 # Environment Variables
 .env
+
+# MLflow Tracking
+mlruns/
