@@ -1,13 +1,13 @@
-# Virtual Environment
+# Python Virtual Environment
 venv/
 __pycache__/
+*.pyc
 
-# Datasets (Keep data local!)
-data/*.csv
-data/*.json
-
-# Environment Variables
-.env
-
-# MLflow Tracking
+# Data and Models
+data/
 mlruns/
+*.pkl
+
+# OS Files
+.DS_Store
+Thumbs.db

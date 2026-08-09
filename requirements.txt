@@ -12,3 +12,4 @@ pydantic
 # MLOps & Tracking
 mlflow
 evidently
+cryptography==41.0.7
