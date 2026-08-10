@@ -1,0 +1,4 @@
+FROM nginx:latest
+# Replace the default Nginx config with our custom one
+COPY nginx.conf /etc/nginx/nginx.conf
+EXPOSE 80

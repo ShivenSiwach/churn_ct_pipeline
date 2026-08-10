@@ -5,6 +5,9 @@ import os
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, roc_auc_score, f1_score
 
+# Permanently bypass the MLflow database requirement for local testing
+os.environ["MLFLOW_ALLOW_FILE_STORE"] = "true"
+
 def retrain_model():
     data_path = "data/current_data.csv"
     
@@ -55,6 +58,10 @@ def retrain_model():
         # Manually log the primary metrics we care about for the deployment gate
         mlflow.log_metric("validation_auc_roc", auc)
         mlflow.log_metric("validation_f1_score", f1)
+
+        # 7. Save the model so the FastAPI service can load it
+        model.save_model("data/model.pkl")
+        print(" Model serialized and saved to data/model.pkl")
 
         print("-" * 40)
         print("Retraining Complete!")
